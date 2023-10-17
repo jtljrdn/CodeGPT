@@ -4,7 +4,8 @@ textarea {
   resize: none;
 }
 
-.language-select{
+textarea:disabled{
+  color: white;
 }
 
 .container {
