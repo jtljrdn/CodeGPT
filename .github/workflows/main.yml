@@ -32,6 +32,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Set up Node
         uses: actions/setup-node@v3
+      - name: env
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
         with:
           node-version: 18
           cache: 'npm'
