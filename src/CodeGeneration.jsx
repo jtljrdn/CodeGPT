@@ -4,9 +4,6 @@ const openai = new OpenAI({
   apiKey: import.meta.env.VITE_API_KEY,
   dangerouslyAllowBrowser: true,
 });
-function TakeInput() {
-  return input;
-}
 
 async function CodeGeneration() {
   const output = document.getElementById("preview");
@@ -25,14 +22,11 @@ async function CodeGeneration() {
       messages: [
         {
           role: "user",
-          content: `Convert this code to ${language}`,
+          content: `TASK: Convert the following code to ${language}. \n\n${input}.`,
         },
-        { role: "user", content: `${input}` },
-        { role: "user", content: "Output as plaintext" },
       ],
     });
     output.innerHTML = chatCompletion.choices[0].message.content;
-    console.log(chatCompletion.choices[0].message.content);
     button.innerHTML = `Convert`;
     button.disabled = false;
   }
