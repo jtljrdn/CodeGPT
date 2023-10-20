@@ -17,6 +17,7 @@ git clone https://github.com/jtljrdn/CodeGPT
 ```sh
 npm install
 ```
+
 2. Create a `.env` file in the root directory
 3. You need to provide your own environment variables from [OpenAI API](https://platform.openai.com/account/api-keys) to .env
 
